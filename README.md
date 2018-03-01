@@ -13,4 +13,8 @@ Static website for upcoming job hunting season.
 
 * Background animation created by Marco Barria (https://codepen.io/fixcl/pen/WxeObg?limit=all&page=4&q=Marco+Barr%C3%ADa)
 * Flipping animation created by David Walsh (https://davidwalsh.name/css-flip)
-*
+
+
+## Todo
+
+* Add mailing error message
