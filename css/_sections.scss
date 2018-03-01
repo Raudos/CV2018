@@ -2,6 +2,14 @@
 
 #fullpage {
   background: white;
+  visibility: hidden;
+  transition: 2s;
+  opacity: 0;
+
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+  };
 
   .section {
     background: white;

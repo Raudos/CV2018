@@ -4,9 +4,9 @@ import { play, rewind, init } from "./animation";
 
 function handleRender() {
   $(".loader").fadeOut({duration: 1000});
-  $("#fullpage").fadeIn({duration: 1000});
+  $("#fullpage").addClass('visible');
 
-  addMailing()
+  addMailing();
 };
 
 function handleLoad(anchor, index) {
