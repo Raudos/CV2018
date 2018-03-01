@@ -1,0 +1,43 @@
+/* main: index.scss*/
+
+#fullpage {
+  background: white;
+
+  .section {
+    background: white;
+    position: relative;
+
+    .fp-scroller {
+      position: relative;
+    };
+
+    .container-fluid {
+      position: relative;
+      z-index: 100;
+      padding: 30px;
+      transition: 3s;
+      width: 90%;
+      margin-right: auto;
+      margin-left: 0;
+    };
+
+    header {
+      h1 {
+        color: $screen;
+        border-bottom: 2px solid $marigold;
+        display: inline-block;
+      };
+    };
+  };
+};
+
+#fp-nav ul li .fp-tooltip {
+  color: $background;
+  font-weight: bold;
+  font-family: Lato;
+};
+
+#fp-nav ul .active + div {
+  width: auto;
+  opacity: 1;
+};

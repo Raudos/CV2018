@@ -1,0 +1,103 @@
+/* main: index.scss*/
+
+#experience-section {
+  &>div {
+    // display: flex;
+    // align-items: center;
+  };
+
+  ul {
+    list-style-type: circle;
+    margin-left: 20px;
+    margin-top: 10px;
+
+    li {
+      margin-bottom: 5px;
+
+      a {
+        font-weight: bold;
+        color: $background;
+      };
+    };
+  };
+
+  .row {
+    justify-content: center;
+    margin-top: 20px;
+
+    div[class*="col"] {
+      margin-bottom: 15px;
+
+      &:nth-child(1) {
+        .image {
+          background-image: url("../assets/images/sekwencja.png");
+        };
+      };
+
+      &:nth-child(2) {
+        .image {
+          background-image: url("../assets/images/storwork.png");
+        };
+      };
+    }
+  };
+
+  .company {
+    justify-content: center;
+    text-align: center;
+    position: relative;
+
+    .image {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      margin: 5px;
+    };
+
+    .info {
+      visibility: hidden;
+      font-family: Lato;
+      text-align: right;
+      padding: 7px;
+      color: $background;
+      background: white;
+
+      @include bottom-right-border(5px, 3px);
+    };
+  };
+
+  &.animate {
+    .company {
+      background: #f7ce3e; /* Old browsers */
+      background: -moz-linear-gradient(-45deg, #f7ce3e 0%, #ffffff 18%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(-45deg, #f7ce3e 0%,#ffffff 18%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(135deg, #f7ce3e 0%,#ffffff 18%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7ce3e', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+      @include top-left-border(5px, 3px);
+
+      .info {
+        -webkit-animation: show-up 1s linear;
+        -moz-animation: show-up 1s linear;
+        -webkit-box-shadow: 33px 33px 42px -29px rgba(0,0,0,0.75);
+        -moz-box-shadow: 33px 33px 42px -29px rgba(0,0,0,0.75);
+        box-shadow: 33px 33px 42px -29px rgba(0,0,0,0.75);
+        background: #ffffff; /* Old browsers */
+        background: -moz-linear-gradient(-45deg, #ffffff 82%, #f7ce3e 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(-45deg, #ffffff 82%,#f7ce3e 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(135deg, #ffffff 82%,#f7ce3e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f7ce3e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+        visibility: visible;
+      };
+    }
+  }
+};
+
+@-webkit-keyframes show-up {
+      0% { opacity: 0 }
+    100% { opacity: 1 }
+}
+@-moz-keyframes show-up {
+      0% { opacity: 0 }
+    100% { opacity: 1 }
+};

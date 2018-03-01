@@ -1,0 +1,159 @@
+/* main: index.scss*/
+
+#skills-section {
+  &.animate {
+    .skill {
+      &:after {
+        left: 100%;
+        -webkit-animation: uncover 3s linear;
+        -moz-animation: uncover 3s linear;
+      }
+    }
+  };
+
+  .col-xs-12:last-child {
+    text-align: right;
+  };
+
+  h2 {
+    color: $screen;
+    display: inline-block;
+    border-bottom: 2px solid $marigold;
+    margin-bottom: 15px;
+  };
+
+  .bar {
+    display: flex;
+    background: $screen;
+    padding-right: 5px;
+
+    .tip {
+      width: 100px;
+      background: $background;
+      color: white;
+      padding: 5px;
+    };
+
+    .prog {
+      height: auto;
+      background: $marigold;
+    };
+
+    .percentage {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+    }
+  };
+
+  .skill {
+    border-left: 5px solid $marigold;
+    border-right: 5px solid $marigold;
+    background: $background;
+    color: white;
+    display: inline-block;
+    padding: 5px 10px;
+    position: relative;
+    overflow: hidden;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      width: 100%;
+      height: 100%;
+      background: $background;
+    };
+
+    &:hover {
+      font-weight: bold;
+    }
+  };
+};
+
+// Variables for loaders
+$htmlWidth: calc(90% - 60px);
+$cssWidth: calc(75% - 60px);
+$sassWidth: calc(75% - 60px);
+$jsWidth: calc(80% - 60px);
+$reactWidth: calc(70% - 60px);
+$uiWidth: calc(40% - 60px);
+$nodeWidth: calc(20% - 60px);
+$nativeWidth: calc(65% - 60px);
+$gitWidth: calc(70% - 60px);
+
+// Create animations
+@include loader(html, $htmlWidth);
+@include loader(css, $cssWidth);
+@include loader(sass, $sassWidth);
+@include loader(js, $jsWidth);
+@include loader(react, $reactWidth);
+@include loader(ui, $uiWidth);
+@include loader(native, $nativeWidth);
+@include loader(git, $gitWidth);
+
+.active {
+  #html {
+    .prog {
+      width: $htmlWidth;
+      @include animateLoader('html 2s linear');
+    };
+  };
+
+  #css {
+    .prog {
+      width: $cssWidth;
+      @include animateLoader('css 2s linear');
+    };
+  };
+
+  #sass {
+    .prog {
+      width: $sassWidth;
+      @include animateLoader('sass 2s linear');
+    };
+  };
+
+  #js {
+    .prog {
+      width: $jsWidth;
+      @include animateLoader('js 2s linear');
+    };
+  };
+
+  #react {
+    .prog {
+      width: $reactWidth;
+      @include animateLoader('react 2s linear');
+    };
+  };
+
+  #ui {
+    .prog {
+      width: $uiWidth;
+      @include animateLoader('ui 2s linear');
+    };
+  };
+
+  #node {
+    .prog {
+      width: $nodeWidth;
+      @include animateLoader('node 2s linear');
+    };
+  };
+
+  #native {
+    .prog {
+      width: $nativeWidth;
+      @include animateLoader('native 2s linear');
+    };
+  };
+
+  #git {
+    .prog {
+      width: $gitWidth;
+      @include animateLoader('git 2s linear');
+    };
+  };
+};

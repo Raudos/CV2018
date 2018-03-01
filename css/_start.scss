@@ -1,0 +1,104 @@
+/* main: index.scss*/
+
+
+
+#start-section {
+  .start-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  	z-index: 10;
+
+  	&> div {
+      // for the border
+  		position: relative;
+      z-index: 10;
+  	};
+
+    .buttons {
+      top: 0%;
+      z-index: 1;
+      width: 100%;
+      position: absolute;
+    };
+
+  	a {
+  		color: $background;
+  	};
+  };
+
+  &.animate {
+    .buttons {
+      -webkit-animation: slide 3s linear;
+      -moz-animation: slide 3s linear;
+      top: 100%;
+    };
+  };
+};
+
+.start-button {
+	font-family: 'Lato';
+	padding: 5px;
+	padding-bottom: 1px;
+	display: inline-block;
+	color: $background;
+	border-bottom: 2px solid $marigold;
+	transition: 0.5s;
+
+
+	&:hover {
+		font-weight: bold;
+		border-bottom: 3px solid $marigold;
+		padding: 2px;
+		cursor: pointer;
+	};
+
+	&:last-child {
+		float: right;
+	};
+};
+
+.introduction {
+  display: block;
+  color: $background;
+  text-decoration: none;
+  font-family: 'Lato';
+  text-align: center;
+  letter-spacing: 5px;
+  padding: 15px;
+	border-top: 3px solid $marigold;
+	background: white;
+	margin-bottom: 10px;
+	-webkit-box-shadow: 0px 4px 14px -5px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 4px 14px -5px rgba(0,0,0,0.75);
+	box-shadow: 0px 4px 14px -5px rgba(0,0,0,0.75);
+
+  p {
+    display: inline-block;
+    color: $marigold;
+    font-weight: bold;
+		margin-bottom: 0px;
+  };
+};
+
+.introduction:before, .introduction:after {
+  content: "";
+  position: absolute;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from($marigold), to(transparent));
+  background-image: -webkit-linear-gradient($marigold, transparent);
+  background-image: -moz-linear-gradient($marigold, transparent);
+  background-image: -o-linear-gradient($marigold, transparent);
+  background-image: linear-gradient($marigold, transparent);
+  top: 0px;
+  bottom: 0px;
+  width: 3px;
+}
+
+.introduction:before {
+  left: -3px;
+}
+
+.introduction:after {
+  right: -3px;
+}

@@ -1,0 +1,96 @@
+/* main: index.scss*/
+
+@keyframes slide {
+  0% { top: 0%; }
+  100% { top: 100%; }
+};
+
+@keyframes uncover {
+  0% { left: 0%; }
+  100% { left: 100%; }
+};
+
+@mixin loader($animation-name, $maxWidth) {
+  @-webkit-keyframes #{$animation-name} {
+      0% { width: 0% }
+    100% { width: $maxWidth }
+  }
+  @-moz-keyframes #{$animation-name} {
+      0% { width: 0% }
+    100% { width: $maxWidth }
+  }
+  @-ms-keyframes #{$animation-name} {
+      0% { width: 0% }
+    100% { width: $maxWidth }
+  }
+  @-o-keyframes #{$animation-name} {
+      0% { width: 0% }
+    100% { width: $maxWidth }
+  }
+  @keyframes #{$animation-name} {
+      0% { width: 0% }
+    100% { width: $maxWidth }
+  }
+};
+
+@mixin animateLoader($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}
+
+@mixin top-left-border($position, $width) {
+  &:before, &:after {
+    content: "";
+    position: absolute;
+    top: -$position;
+    left: -$position;
+  };
+
+  &:before {
+    bottom: -$position;
+    width: $width;
+    background-image: -webkit-gradient(linear, 0 100%, 0 0, from(transparent), to($marigold));
+    background-image: -webkit-linear-gradient($marigold, transparent);
+    background-image: -moz-linear-gradient($marigold, transparent);
+    background-image: -o-linear-gradient($marigold, transparent);
+  };
+
+  &:after {
+    right: -$position;
+    height: $width;
+    background-image: -webkit-gradient(linear, 0 0, 100% 0, from($marigold), to(transparent));
+    background-image: -webkit-linear-gradient(left, $marigold, transparent);
+    background-image: -moz-linear-gradient(left, $marigold, transparent);
+    background-image: -o-linear-gradient(left, $marigold, transparent);
+  };
+};
+
+@mixin bottom-right-border($position, $width) {
+  &:before, &:after {
+    content: "";
+    position: absolute;
+    bottom: -$position;
+    right: -$position;
+  };
+
+  &:before {
+    top: -$position;
+    width: $width;
+    background-image: -webkit-gradient(linear, 0 100%, 0 0, from($marigold), to(transparent));
+    background-image: -webkit-linear-gradient(transparent, $marigold);
+    background-image: -moz-linear-gradient(transparent, $marigold);
+    background-image: -o-linear-gradient(transparent, $marigold);
+  };
+
+  &:after {
+    left: -$position;
+    height: $width;
+    background-image: -webkit-gradient(linear, 0 0, 100% 0, from($marigold), to(transparent));
+    background-image: -webkit-linear-gradient(right, $marigold, transparent);
+    background-image: -moz-linear-gradient(right, $marigold, transparent);
+    background-image: -o-linear-gradient(right, $marigold, transparent);
+  };
+}

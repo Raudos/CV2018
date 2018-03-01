@@ -1,0 +1,144 @@
+/* main: index.scss*/
+
+$imgMargin: 5px;
+
+#about-section {
+  text-align: center;
+
+  header {
+    text-align: left;
+  };
+
+  &.animate {
+    .trait {
+      background: transparent;
+      border-radius: 10px;
+
+      .flipper {
+        transform: rotateY(180deg);
+      }
+    };
+  };
+
+  #photo {
+    margin: 20px 0;
+    display: inline-block;
+    position: relative;
+
+    @include top-left-border(10px, 3px);
+
+    &>div {
+      position: relative;
+
+      @include bottom-right-border(10px, 3px);
+    };
+  };
+
+  #traits {
+    display: flex;
+    align-items: center;
+
+    @for $i from 1 through 4 {
+      .trait:nth-child(#{$i}) {
+        .flipper {
+          transition-delay: 0.5s * $i;
+        };
+      }
+    };
+
+    .trait {
+      padding: 15px;
+      perspective: 1000px;
+
+      /* flip speed goes here */
+
+      .flipper {
+      	transition: 2s;
+      	transform-style: preserve-3d;
+      }
+
+      /* hide back of pane during swap */
+      .front, .back {
+      	backface-visibility: hidden;
+      }
+
+      /* front pane, placed above back */
+      .front {
+      	z-index: 2;
+      	/* for firefox 31 */
+      	transform: rotateY(0deg);
+      }
+
+      /* back, initially hidden pane */
+      .back {
+      	transform: rotateY(180deg);
+      }
+
+      .fab, .fas {
+        color: $marigold;
+      };
+
+      b {
+        font-size: 20px;
+        color: $screen;
+        padding: 5px 10px;
+        border-bottom: 1.5px solid $marigold;
+      };
+
+      p {
+        color: $background;
+        margin-top: 5px;
+      };
+    };
+  };
+};
+//
+// .triangle-container {
+//   display: flex;
+//
+//   .triangle {
+//     width: 0;
+//     height: 0;
+//     border-top: 30px solid transparent;
+//     border-bottom: 30px solid transparent;
+//     border-left: 30px solid $marigold;
+//   };
+//
+//   .top-left {
+//     transform: rotate(-45deg) translateY(10px);
+//   };
+//
+//   .top-right {
+//     transform: rotate(225deg) translateY(-10px);
+//   };
+//
+//   .bottom-left {
+//     transform: rotate(45deg) translateY(-10px);
+//   };
+//
+//   .bottom-right {
+//     transform: rotate(-225deg) translateY(10px);
+//   };
+// };
+// <div class="triangle-container">
+//   <div>
+//     <div class="triangle top-left">
+//
+//     </div>
+//     <div class="triangle bottom-left">
+//
+//     </div>
+//   </div>
+//   <div>
+//     vkjsbdjhvsbdhj
+//   </div>
+//   <div>
+//
+//     <div class="triangle top-right">
+//
+//     </div>
+//     <div class="triangle bottom-right">
+//
+//     </div>
+//   </div>
+// </div>

@@ -1,0 +1,19 @@
+/* main: index.scss*/
+
+#header {
+  position:fixed;
+  display:block;
+  width: 100%;
+  background: transparent;
+  z-index: 9;
+  padding: 5px;
+  top:0px;
+
+  li {
+    display: inline-block;
+
+    a {
+      color: white;
+    };
+  };
+};

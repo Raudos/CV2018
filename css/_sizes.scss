@@ -1,0 +1,163 @@
+/* main: index.scss*/
+$width: 78px;
+$maxWidth: 1200px;
+
+$basicFont: 20px;
+$h1Font: 60px;
+$h2Font: 45px;
+$boldFont: 23px;
+$iconMarginBottom: 20px;
+$imgWidth: 250px;
+$headerBottomMargin: 30px;
+
+$barsBottomMargin: 20px;
+$skillsBottomMargin: 12px;
+$skillsRightMargin: 12px;
+
+$companyLogo: 30px;
+
+$logosSize: 90px;
+$inputsMarginBottom: 30px;
+
+#start-section {
+
+};
+
+#skills-section {
+
+};
+
+#experience-section {
+
+};
+
+#contact-section {
+
+};
+
+@for $i from 0 through 9 {
+  @media (max-width: $maxWidth - $width * $i) {
+    div, p {
+      font-size: $basicFont - 1.2px * $i;
+    };
+
+    #fp-nav ul li .fp-tooltip {
+      font-size: $basicFont - 1.2px * $i;
+    };
+
+    header {
+      margin-left: 50px;
+      margin-bottom: $headerBottomMargin - 3.5px * $i;
+    };
+
+    h1 {
+      font-size: $h1Font - 5px * $i;
+    };
+
+    h2 {
+      font-size: $h2Font - 3.7px * $i;
+    };
+
+    #about-section {
+      img {
+        width: $imgWidth - 22px * $i;
+      };
+
+      .fas, .fab {
+        font-size: 80px - 7px * $i;
+        margin-bottom: $iconMarginBottom - 1.2px * $i;
+      };
+
+      b {
+        font-size: $boldFont - 1.2 * $i !important;
+      };
+    };
+
+    #skills-section {
+      .bar {
+        margin-bottom: $barsBottomMargin - 1.5px * $i;
+      };
+
+      .skill {
+        margin-bottom: $skillsBottomMargin - 0.8px * $i;
+        margin-right: $skillsRightMargin - 0.8px * $i;
+      };
+    };
+
+    #experience-section {
+      .image {
+        height: $companyLogo - 1.6px * $i;
+      };
+    };
+
+    #contact-section {
+      .input-group {
+        margin-bottom: $inputsMarginBottom - 2px * $i;
+      };
+
+      .fab {
+        font-size: $logosSize - 5px * $i;
+      };
+    };
+  };
+};
+
+@media (min-width: 1200px) {
+  div, p {
+    font-size: $basicFont;
+  };
+
+  header {
+    margin-left: 50px;
+    margin-bottom: $headerBottomMargin;
+  };
+
+  h1 {
+    font-size: $h1Font;
+  };
+
+  h2 {
+    font-size: $h2Font;
+  };
+
+  #about-section {
+    img {
+      width: $imgWidth;
+    };
+
+    .fas, .fab {
+      font-size: 80px;
+      margin-bottom: $iconMarginBottom;
+    };
+
+    b {
+      font-size: $boldFont !important;
+    };
+  };
+
+  #skills-section {
+    .bar {
+      margin-bottom: $barsBottomMargin;
+    };
+
+    .skill {
+      margin-bottom: $skillsBottomMargin;
+    };
+  };
+
+  #experience-section {
+    .image {
+      height: $companyLogo;
+    };
+  };
+
+  #contact-section {
+    .input-group {
+      margin-bottom: $inputsMarginBottom;
+    };
+
+    .fab {
+      font-size: $logosSize;
+    }
+  };
+};

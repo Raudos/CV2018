@@ -1,0 +1,20 @@
+@import '_variables';
+@import '_mixins';
+@import '_sizes';
+@import '_loader';
+@import '_sections';
+@import '_header';
+@import '_start';
+@import '_about';
+@import '_skills';
+@import '_experience';
+@import '_contact';
+@import '_mainAnimation';
+
+body {
+  font-family: Lato;
+};
+
+a:hover {
+  text-decoration: none;
+};

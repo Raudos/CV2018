@@ -1,0 +1,89 @@
+/* main: index.scss*/
+
+#contact-section {
+  form {
+    padding: 2em;
+
+    .input-group {
+      p {
+        margin-bottom: 5px;
+        font-weight: bold;
+      };
+
+      input, textarea {
+        padding: 5px 10px;
+        width: 100%;
+        border: 1.5px solid $marigold;
+        border-radius: 5px;
+
+        &:disabled {
+          background: rgba(0, 0, 0, 0.5);
+          font-weight: bold;
+          color: white;
+        };
+      };
+
+      textarea {
+        resize: none;
+      };
+    };
+
+    button {
+      border: 1.5px solid $marigold;
+      background: white;
+      color: $background;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 400;
+      transition: color 1s;
+      float: left;
+
+      &:hover {
+        font-weight: bold;
+        animation: blinds 0.75s linear forwards;
+        background: linear-gradient(0deg, white 25%, transparent 25%) 0 0 / 0.5em 0.5em
+                  , linear-gradient(0deg, $marigold 50%, transparent 50%) 0 0 / 1em 1em;
+        color: adjust-hue(white,180);
+      }
+    };
+  };
+
+  .logos {
+    text-align: center;
+
+    .logo {
+      border-radius: 5px;
+      border: 1.5px solid $marigold;
+      display: inline-block;
+      margin: 20px;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      background: $marigold;
+
+      .fab {
+        padding: 10px;
+        color: white;
+      };
+
+      &:hover {
+        font-weight: bold;
+        animation: blinds 0.75s linear forwards;
+        background: linear-gradient(0deg, $marigold 50%, transparent 0%) 0 0 / 1em 1em;
+        color: adjust-hue($marigold,180);
+
+        .fab {
+          color: $marigold;
+        };
+      }
+    }
+  }
+};
+
+@keyframes blinds {
+  100% {
+    background-position: 0 0, 0 -3em;
+    background-size: 0 0, 1em 6em;
+  }
+};
