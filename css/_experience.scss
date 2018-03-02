@@ -26,15 +26,15 @@
     margin-top: 20px;
 
     div[class*="col"] {
-      margin-bottom: 15px;
+      margin-bottom: 30px;
 
-      &:nth-child(1) {
+      &:nth-child(2) {
         .image {
           background-image: url("../assets/images/sekwencja.png");
         };
       };
 
-      &:nth-child(2) {
+      &:nth-child(3) {
         .image {
           background-image: url("../assets/images/storwork.png");
         };

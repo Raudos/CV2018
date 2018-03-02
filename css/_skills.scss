@@ -11,7 +11,7 @@
     }
   };
 
-  .col-xs-12:last-child {
+  .col-md-6:last-child {
     text-align: right;
   };
 
@@ -28,15 +28,18 @@
     padding-right: 5px;
 
     .tip {
-      width: 100px;
       background: $background;
       color: white;
       padding: 5px;
     };
 
-    .prog {
-      height: auto;
-      background: $marigold;
+    .empty {
+      flex: 1;
+
+      .prog {
+        height: 100%;
+        background: $marigold;
+      };
     };
 
     .percentage {
@@ -73,15 +76,15 @@
 };
 
 // Variables for loaders
-$htmlWidth: calc(90% - 60px);
-$cssWidth: calc(75% - 60px);
-$sassWidth: calc(75% - 60px);
-$jsWidth: calc(80% - 60px);
-$reactWidth: calc(70% - 60px);
-$uiWidth: calc(40% - 60px);
-$nodeWidth: calc(20% - 60px);
-$nativeWidth: calc(65% - 60px);
-$gitWidth: calc(70% - 60px);
+$htmlWidth: 90%;
+$cssWidth: 75%;
+$sassWidth: 75%;
+$jsWidth: 80%;
+$reactWidth: 70%;
+$uiWidth: 40%;
+$nodeWidth: 20%;
+$nativeWidth: 65%;
+$gitWidth: 70%;
 
 // Create animations
 @include loader(html, $htmlWidth);

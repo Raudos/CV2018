@@ -12,7 +12,7 @@ function handleRender() {
 function handleLoad(anchor, index) {
   if (!window.animationChecker || !window.animationChecker[index]) {
     window.animationChecker ? window.animationChecker[index] = true : window.animationChecker = {[index]: true};
-    //window.animationMaster = init(index);
+
     init(index);
   }
 };

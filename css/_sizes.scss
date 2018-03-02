@@ -19,20 +19,12 @@ $companyLogo: 30px;
 $logosSize: 90px;
 $inputsMarginBottom: 30px;
 
-#start-section {
+$tipWidth: 110px;
 
-};
-
-#skills-section {
-
-};
-
-#experience-section {
-
-};
-
-#contact-section {
-
+@media (max-width: 650px) {
+  #fp-nav ul li .fp-tooltip {
+    display: none;
+  };
 };
 
 @for $i from 0 through 9 {
@@ -46,7 +38,6 @@ $inputsMarginBottom: 30px;
     };
 
     header {
-      margin-left: 50px;
       margin-bottom: $headerBottomMargin - 3.5px * $i;
     };
 
@@ -74,6 +65,10 @@ $inputsMarginBottom: 30px;
     };
 
     #skills-section {
+      .tip {
+        width: $tipWidth - 5px * $i;
+      };
+
       .bar {
         margin-bottom: $barsBottomMargin - 1.5px * $i;
       };
@@ -96,7 +91,7 @@ $inputsMarginBottom: 30px;
       };
 
       .fab {
-        font-size: $logosSize - 5px * $i;
+        font-size: $logosSize - 3px * $i;
       };
     };
   };
@@ -108,7 +103,6 @@ $inputsMarginBottom: 30px;
   };
 
   header {
-    margin-left: 50px;
     margin-bottom: $headerBottomMargin;
   };
 
@@ -136,6 +130,10 @@ $inputsMarginBottom: 30px;
   };
 
   #skills-section {
+    .tip {
+      width: $tipWidth;
+    };
+
     .bar {
       margin-bottom: $barsBottomMargin;
     };

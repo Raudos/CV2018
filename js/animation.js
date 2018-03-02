@@ -178,7 +178,7 @@ var init = function init(index) {
       .add(romboAnimation(actualIndex), "-=1.8", "scene2");
   master.timeScale(timer);
 
-  window.setTimeout(() => $(".section").eq(actualIndex).toggleClass("animate"), 2000)
+  window.setTimeout(() => $(".section").eq(actualIndex).toggleClass("animate"), 1000)
 
   return master;
 };

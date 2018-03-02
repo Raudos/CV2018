@@ -50,6 +50,10 @@ $imgMargin: 5px;
       padding: 15px;
       perspective: 1000px;
 
+      @media (max-width: 800px) {
+        padding: 7.5px;
+      };
+
       /* flip speed goes here */
 
       .flipper {
@@ -81,13 +85,13 @@ $imgMargin: 5px;
       b {
         font-size: 20px;
         color: $screen;
-        padding: 5px 10px;
         border-bottom: 1.5px solid $marigold;
       };
 
       p {
         color: $background;
         margin-top: 5px;
+        margin-bottom: 0;
       };
     };
   };
