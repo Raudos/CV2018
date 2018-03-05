@@ -489,7 +489,7 @@
 								<p>
 									To:
 								</p>
-								<input value="Sklepinski.p@gmail.com" disabled />
+								<input id="to" value="Sklepinski.p@gmail.com" disabled />
 							</div>
 
 							<div class="input-group">
@@ -516,9 +516,23 @@
 								</textarea>
 							</div>
 
-							<button type="submit">
-								Send
-							</button>
+							<div class="submit">
+								<button type="submit">
+									Send
+								</button>
+
+								<div class="feedback">
+									<b>Thank you for contacting me!</b>
+									<br />
+									I'll make sure to send a reply as fast as possible.
+								</div>
+
+								<div class="error-message">
+									<b>Something went wrong.</b>
+									<br />
+									It seems that your message couldn't be delivered.
+								</div>
+							</div>
 						</form>
 
 						<div class="col-md-6 col-sm-12 logos">

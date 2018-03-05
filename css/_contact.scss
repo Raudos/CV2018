@@ -37,7 +37,6 @@
       cursor: pointer;
       font-weight: 400;
       transition: color 1s;
-      float: left;
 
       &:hover {
         font-weight: bold;
@@ -78,7 +77,37 @@
         };
       }
     }
-  }
+  };
+
+  .submit {
+    position: relative;
+
+    .feedback, .error-message {
+      text-align: right;
+      position: absolute;
+      top: 0;
+      left: -200%;
+      transition: 2s;
+      z-index: 4;
+      padding: 5px;
+      background: $marigold;
+      color: white;
+      border-radius: 10px;
+
+      &.animated {
+        left: 100px;
+      };
+    };
+
+    .error-message {
+      background: red;
+    };
+
+    button {
+      z-index: 5;
+      position: relative;
+    };
+  };
 };
 
 @keyframes blinds {

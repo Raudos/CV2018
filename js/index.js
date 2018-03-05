@@ -1,7 +1,6 @@
 import addMailing from "./mailing";
 import { play, rewind, init } from "./animation";
 
-
 function handleRender() {
   $(".loader").fadeOut({duration: 1000});
   $("#fullpage").addClass('visible');
