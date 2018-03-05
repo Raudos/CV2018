@@ -16,4 +16,4 @@ Static website for upcoming job hunting season.
 
 ## Todo
 
-* Add mailing error message
+* <del>Add mailing error message</del>

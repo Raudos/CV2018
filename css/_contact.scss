@@ -27,25 +27,6 @@
         resize: none;
       };
     };
-
-    button {
-      border: 1.5px solid $marigold;
-      background: white;
-      color: $background;
-      padding: 5px 10px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: 400;
-      transition: color 1s;
-
-      &:hover {
-        font-weight: bold;
-        animation: blinds 0.75s linear forwards;
-        background: linear-gradient(0deg, white 25%, transparent 25%) 0 0 / 0.5em 0.5em
-                  , linear-gradient(0deg, $marigold 50%, transparent 50%) 0 0 / 1em 1em;
-        color: adjust-hue(white,180);
-      }
-    };
   };
 
   .logos {
@@ -106,6 +87,26 @@
     button {
       z-index: 5;
       position: relative;
+      border: 1.5px solid $marigold;
+      background: white;
+      color: $background;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 400;
+      transition: color 1s;
+
+      &:disabled {
+        cursor: wait;
+      };
+
+      &:hover {
+        font-weight: bold;
+        animation: blinds 0.75s linear forwards;
+        background: linear-gradient(0deg, white 25%, transparent 25%) 0 0 / 0.5em 0.5em
+                  , linear-gradient(0deg, $marigold 50%, transparent 50%) 0 0 / 1em 1em;
+        color: adjust-hue(white,180);
+      }
     };
   };
 };
