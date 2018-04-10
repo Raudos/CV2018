@@ -81,8 +81,8 @@ $cssWidth: 75%;
 $sassWidth: 75%;
 $jsWidth: 80%;
 $reactWidth: 70%;
-$uiWidth: 40%;
-$nodeWidth: 20%;
+$apiWidth: 40%;
+$nodeWidth: 45%;
 $nativeWidth: 65%;
 $gitWidth: 70%;
 
@@ -92,7 +92,8 @@ $gitWidth: 70%;
 @include loader(sass, $sassWidth);
 @include loader(js, $jsWidth);
 @include loader(react, $reactWidth);
-@include loader(ui, $uiWidth);
+@include loader(node, $nodeWidth);
+@include loader(api, $apiWidth);
 @include loader(native, $nativeWidth);
 @include loader(git, $gitWidth);
 
@@ -132,10 +133,10 @@ $gitWidth: 70%;
     };
   };
 
-  #ui {
+  #api {
     .prog {
-      width: $uiWidth;
-      @include animateLoader('ui 2s linear');
+      width: $apiWidth;
+      @include animateLoader('api 2s linear');
     };
   };
 
